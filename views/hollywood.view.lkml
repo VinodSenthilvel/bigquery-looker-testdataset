@@ -12,11 +12,11 @@ view: hollywood {
   dimension: movie_url {
     type: string
     sql: ${TABLE}.movie_url ;;
+    drill_fields: [music_director]
   }
   dimension: music_director {
     type: string
     sql: ${TABLE}.music_director ;;
-    drill_fields: [movie_url]
   }
   measure: count {
     type: count
